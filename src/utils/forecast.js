@@ -17,9 +17,15 @@ const forecast = (lat, long, callback) => {
         response.body.current.weather_descriptions[0] +
           ". It is currently " +
           response.body.current.temperature +
-          " degrees out. There is a " +
+          "°C. It feels like " +
+          response.body.current.feelslike +
+          "°C. There is a " +
           response.body.current.precip +
-          "% chance of rain."
+          "% chance of rain. The wind speed is " +
+          response.body.current.wind_speed +
+          " km/h. The humidity is " +
+          response.body.current.humidity +
+          "%."
       );
     }
   });
